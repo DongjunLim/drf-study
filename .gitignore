@@ -4,7 +4,6 @@
 *.db
 *~
 
-
 /site/
 /htmlcov/
 /coverage/
