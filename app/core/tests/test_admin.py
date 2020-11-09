@@ -1,9 +1,7 @@
 import pytest
 
-from core.models import User
 
 from django.urls import reverse
-from django.test import Client
 from django.contrib.auth import get_user_model
 
 from rest_framework.test import APIClient
@@ -62,7 +60,7 @@ def test_user_change_page(client):
 @pytest.mark.django_db
 def test_create_user_page(client):
     """Test that the create user page works"""
-    user = get_user_model().objects.create_user(
+    get_user_model().objects.create_user(
         email="user1238@gmail.com",
         password="password123",
         name="user name"
